@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+
+  --first-color: #1cc5dc;
+  --second-color: #eeeeee;
+
+  --body-font: "Ubuntu", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+body {
+  color: var(--second-color);
+  background-color: #222831;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--h2-font-size);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #393e46;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
+  padding-left: var(--mb-4);
+  padding-right: var(--mb-4);
+}
+
+.nav__logo {
+  color: var(--second-color);
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  margin-left: var(--mb-3);
+}
+
+.home {
+  height: 100vh;
+  max-width: 1200px;
+  padding-left: var(--mb-4);
+  padding-right: var(--mb-4);
+}
+
+.home__data {
+  align-self: center;
+  margin-left: 3%;
+  margin-top: 6%;
+}
+
+.home__title {
+  font-size: 50px;
+  padding-top: 70px;
+  margin-bottom: var(--mb-5);
+}
+
+.home__title-color {
+  color: var(--first-color);
+}
+
+.home__img {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #222831;
+  padding: 0.75rem 2.5rem;
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+}

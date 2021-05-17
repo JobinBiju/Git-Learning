@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 
 :root {
   --header-height: 3rem;
@@ -7,7 +7,7 @@
   --first-color: #1cc5dc;
   --second-color: #eeeeee;
 
-  --body-font: "Ubuntu", sans-serif;
+  --body-font: "KoHo", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
@@ -55,6 +55,7 @@ a {
   top: 0;
   left: 0;
   background-color: #393e46;
+  z-index: var(--z-fixed);
 }
 
 .nav {
@@ -80,7 +81,7 @@ a {
 }
 
 .home {
-  height: 100vh;
+  height: calc(100vh - 3rem);
   max-width: 1200px;
   padding-left: var(--mb-4);
   padding-right: var(--mb-4);
@@ -106,6 +107,11 @@ a {
   position: absolute;
   right: 100px;
   bottom: 100px;
+  transition: 1s;
+}
+
+.home__img:hover {
+  transform: scale(1.1);
 }
 
 .button {
@@ -115,4 +121,34 @@ a {
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
+}
+
+.button:focus {
+  background-color: #939b62;
+}
+
+.aboout {
+  height: 100vh;
+}
+
+.section-title {
+  position: relative;
+  font-size: var(--big-font-size);
+  color: var(--first-color);
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-4);
+  text-align: center;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 64px;
+  height: 0.38rem;
+  left: 0;
+  right: 0;
+  top: 3rem;
+  background-color: var(--first-color);
+  margin: auto;
+  border-radius: 10px;
 }
